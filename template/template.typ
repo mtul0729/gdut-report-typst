@@ -11,12 +11,16 @@
   title: "Title",
   authors: ("author1", "author2"),
   date: (2023, 5, 14),
-  name: "测试名称",
+  //name: "测试名称",
+
   cover_style: "normal",
-  class:"计科2000",
-  grade:"2021",
+
   department:"计算机科学与技术学院",
-  id:"2020000000",
+  id:"2020000000", //学号
+  major:"",
+  grade_class:"",
+  author:"", //学生姓名
+  teacher:"", //指导老师
   body
 ) = {
   set document(title: title, author: authors);
@@ -29,22 +33,16 @@
       authors: authors,
       date: date
     );
-  } else if cover_style == "zjut_report" {
-    cover_zjut_report(
-      title:title,
-      author:authors,
-      name:name,
-      class:class,
-      grade:grade,
-      department:department,
+  } else if cover_style == "gdut_report" {
+    cover_gdut_report(
+      title:title, 
+      department:department, //学院
+      major:major,
+      grade_class:grade_class,
+      id:id, //学号
+      author:author, //学生姓名
+      teacher:teacher, //指导老师
       date:date,
-      id:id,
-    );
-  } else {
-    cover_normal(
-      title: title, 
-      authors: authors,
-      date: date
     );
   }
     show figure: it => {

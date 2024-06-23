@@ -46,40 +46,43 @@
   ) 
 }
 
-#let cover_zjut_report( 
-  title:"",
-  author:"",
-  name:"",
-  class:"",
-  grade:"",
-  department:"",
+#let cover_gdut_report( 
+  title:"", 
+  department:"", //学院
+  major:"",
+  grade_class:"",
+  id:"", //学号
+  author:"", //学生姓名
+  teacher:"", //指导老师
   date:(2023, 04, 17),
-  id:"",
-) = {
+  ) = {
+  image("./asserts/school_badge.png", width: 15%)
+  align(center)[
+    #image("./asserts/school_name.png", width: 65%)\
+    #text(title, size: 24pt, font: font_style.songti, weight: "bold")
+  ]
   align(center + horizon)[
-    #image("asserts/校名.png", width: 60%)
-    #text(title, size: 24pt, font: font_style.songti, weight: "bold")\
-    #text("(" + grade + "级)", size: 20pt, font: font_style.songti)\
-    #image("asserts/校徽.png", width: 40%)
-
       #grid(
       columns: (70pt, 180pt),
       rows: (40pt, 40pt),
       gutter: 3pt,
-      _info_key("实验题目"),
-      _info_value(name),
-      _info_key("学生姓名"),
-      _info_value(author),
+      _info_key("学　　院"),
+      _info_value(department),
+      _info_key("专　　业"),
+      _info_value(major),
+      _info_key("年级班别"),
+      _info_value(grade_class),
       _info_key("学　　号"),
       _info_value(id),
-      _info_key("专业班级"),
-      _info_value(class),
-      _info_key("所在学院"),
-      _info_value(department),
-      _info_key("提交日期"),
-      _info_value(text(font: font_style.songti,size: 16pt,)[#date.at(0) 年 #date.at(1) 月 #date.at(2) 日]),
-  )
+      _info_key("学生姓名"),
+      _info_value(author),
+      _info_key("指导教师"),
+      _info_value(teacher),
+      _info_key("成　　绩"),
+      _info_value(""),
+      )
   ]
+  align(center + bottom)[#text(font: font_style.songti,size: 16pt,)[#date.at(0) 年 #date.at(1) 月 #date.at(2) 日]]
   pagebreak()
 }
 

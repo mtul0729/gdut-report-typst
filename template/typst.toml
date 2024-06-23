@@ -1,7 +1,7 @@
 [package]
-name = "zjut-report-typst"
+name = "gdut-report-typst"
 version = "0.1.0"
 entrypoint = "template.typ"
-authors = ["FinleyGe"]
+authors = ["MyuNN"]
 license = "MIT"
-description = "the typst template for reports of ZJUT"
+description = "the typst template for reports of GDUT"

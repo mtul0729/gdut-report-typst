@@ -1,14 +1,15 @@
 #import "template/template.typ": *
 
 #show: project.with(
-  title: "xxx课程实验报告",
-  name:"xxx实验",
-  id: "202110001000",
-  class: "计科2100",
-  authors: "作者",
-  department: "计算机学院",
-  date: (2023, 5, 15),
-  cover_style: "zjut_report",
+  title:"《ACM程序设计》课程报告", 
+  department:"计算机学院", //学院
+  major:"计算机科学与技术", //专业
+  grade_class:"2022级0班",
+  id:"3122000000", //学号
+  author:"张三", //学生姓名
+  teacher:"李四", //指导老师
+  date:(2024, 06, 23),
+  cover_style: "gdut_report",
 )
 
 #toc()
@@ -51,8 +52,8 @@
 = 大标题测试2
 
 #img(
-image("./template/asserts/校名.png"),
-caption: "测试图片, 浙江工业大学",
+image("./template/asserts/school_name.png"),
+caption: "测试图片, 广东工业大学",
 ) <img:test>
 
 
